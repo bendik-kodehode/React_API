@@ -19,9 +19,9 @@ const router = createBrowserRouter([
     element: <ResultsPage/>
   },
   {
-    path: "/detail",
+    path: "/detail/:id",
     element: <DetailPage/>
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

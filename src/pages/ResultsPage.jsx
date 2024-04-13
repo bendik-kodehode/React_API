@@ -22,9 +22,10 @@ export default function ResultsPage(input) {
     return (
         <div>
             <ul>
-                {result.map(resultItem => {
+                {/* {result.map(resultItem => {
                     return <ListItem resultItem={resultItem}/>
-                })}
+                })} */}
+                <p>Hello!</p>
             </ul>
         </div>
     )

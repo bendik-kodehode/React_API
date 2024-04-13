@@ -1,11 +1,21 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import style from "./LandingPage.module.css";
 
 export default function LandingPage() {
     const [input, setInput] = useState("");
-    console.log(input);
+    
+    useEffect(() => {
+        const redirect = () => {
+            
+        }
+    }, [])
+
+    // const handleInput = (e) => {
+    //     e.preventDefault();
+    //     useNavigate("/results", {state:{query: input}})
+    // }
 
     return (
         <div className={style.background}>
