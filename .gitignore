@@ -1,5 +1,8 @@
 notes.txt
 
+# Enviroment
+.env
+
 # Logs
 logs
 *.log
