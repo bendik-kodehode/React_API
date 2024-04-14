@@ -5,17 +5,14 @@ import style from "./LandingPage.module.css";
 
 export default function LandingPage() {
     const [input, setInput] = useState("");
+    const navigate = useNavigate();
     
     useEffect(() => {
         const redirect = () => {
-            
+            navigate("/results", { state: { query: input}})
         }
-    }, [])
-
-    // const handleInput = (e) => {
-    //     e.preventDefault();
-    //     useNavigate("/results", {state:{query: input}})
-    // }
+        if (input) redirect();
+    }, [input])
 
     return (
         <div className={style.background}>
