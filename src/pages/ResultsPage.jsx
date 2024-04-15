@@ -10,46 +10,46 @@ export default function ResultsPage() {
     const location = useLocation();
     const { query } = location.state || {}; 
 
-    useEffect(() => {
-        const fetch = async () => {
-            const url = import.meta.env.VITE_API_URL;
-            const key = import.meta.env.VITE_API_KEY;
-            // const encodedQuery = encodeURIComponent(query)
-            try {
-                const result = await axios({
-                    method: "get",
-                    url: `${url}/v1/search/`,
-                    params: {
-                        apiKey: key,
-                        search_field: "name",
-                        types: "tv,movie",
-                        // search_value: encodedQuery
-                        search_value: query
-                    }
-                });
-                setData(result.data)
-                console.log("Fetched");
-            } catch (error) {
-                console.error(error.message)
-            }
-        }
-        fetch();
-    }, [])
-
     // useEffect(() => {
     //     const fetch = async () => {
+    //         const url = import.meta.env.VITE_API_URL;
+    //         const key = import.meta.env.VITE_API_KEY;
+    //         // const encodedQuery = encodeURIComponent(query)
     //         try {
     //             const result = await axios({
     //                 method: "get",
-    //                 url: "https://jsonplaceholder.typicode.com/posts"
-    //             })
+    //                 url: `${url}/v1/search/`,
+    //                 params: {
+    //                     apiKey: key,
+    //                     search_field: "name",
+    //                     types: "tv,movie",
+    //                     // search_value: encodedQuery
+    //                     search_value: query
+    //                 }
+    //             });
     //             setData(result.data)
+    //             console.log("Fetched");
     //         } catch (error) {
     //             console.error(error.message)
     //         }
     //     }
     //     fetch();
     // }, [])
+
+    useEffect(() => {
+        const fetch = async () => {
+            try {
+                const result = await axios({
+                    method: "get",
+                    url: "https://mocki.io/v1/67ca190d-7ddc-4e24-b59e-6547f8777c77"
+                })
+                setData(result.data)
+            } catch (error) {
+                console.error(error.message)
+            }
+        }
+        fetch();
+    }, [])
 
     useEffect(() => {
         const log = () => {
