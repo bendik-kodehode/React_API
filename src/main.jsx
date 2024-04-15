@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
 import LandingPage from "./pages/LandingPage/LandingPage";
-import DetailPage from "./pages/DetailPage";
+import DetailsPage from "./pages/DetailsPage";
 import ResultsPage from "./pages/ResultsPage";
 import ErrorPage from "./pages/ErrorPage";
 
@@ -16,12 +16,14 @@ const router = createBrowserRouter([
   },
   {
     path: "/results",
-    element: <ResultsPage/>
-  },
-  {
-    path: "/detail/:id",
-    element: <DetailPage/>
-  },
+    element: <ResultsPage/>,
+    children: [
+      {
+        path: "/results/:id",
+        element: <DetailsPage/>
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -14,17 +14,43 @@ export default function ResultsPage() {
         const fetch = async () => {
             const url = import.meta.env.VITE_API_URL;
             const key = import.meta.env.VITE_API_KEY;
-            const encodedQuery = encodeURIComponent(query)
+            // const encodedQuery = encodeURIComponent(query)
             try {
-                const result = await axios(`${url}/v1/search/?apiKey=${key}&search_field=name&types=tv,movie&search_value=${encodedQuery}`);
+                const result = await axios({
+                    method: "get",
+                    url: `${url}/v1/search/`,
+                    params: {
+                        apiKey: key,
+                        search_field: "name",
+                        types: "tv,movie",
+                        // search_value: encodedQuery
+                        search_value: query
+                    }
+                });
+
                 setData(result.data)
                 console.log("Fetched");
             } catch (error) {
                 console.error(error.message)
             }
         }
-        // fetch();
+        fetch();
     }, [])
+
+    // useEffect(() => {
+    //     const fetch = async () => {
+    //         try {
+    //             const result = await axios({
+    //                 method: "get",
+    //                 url: "https://jsonplaceholder.typicode.com/posts"
+    //             })
+    //             setData(result.data)
+    //         } catch (error) {
+    //             console.error(error.message)
+    //         }
+    //     }
+    //     fetch();
+    // }, [])
 
     useEffect(() => {
         const log = () => {
@@ -34,11 +60,11 @@ export default function ResultsPage() {
     }, [data])
 
     return (
-        <div>
+        <div style={{backgroundColor: "gray", minHeight: "100vh"}}>
             <ul>
-                {data?.title_results.map((e, i) => {
-                    return <ListItem item={e} key={i}/>
-                })}
+                {/* {data?.title_results.map((e, i) => {
+                    return <ListItem item={e} key={i} id={e.id}/>
+                })} */}
             </ul>
         </div>
     )
