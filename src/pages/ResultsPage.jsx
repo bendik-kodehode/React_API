@@ -27,7 +27,6 @@ export default function ResultsPage() {
                         search_value: query
                     }
                 });
-
                 setData(result.data)
                 console.log("Fetched");
             } catch (error) {
@@ -62,9 +61,9 @@ export default function ResultsPage() {
     return (
         <div style={{backgroundColor: "gray", minHeight: "100vh"}}>
             <ul>
-                {/* {data?.title_results.map((e, i) => {
+                {data?.title_results.map((e, i) => {
                     return <ListItem item={e} key={i} id={e.id}/>
-                })} */}
+                })}
             </ul>
         </div>
     )
