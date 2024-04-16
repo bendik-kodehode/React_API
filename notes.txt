@@ -1,0 +1,33 @@
+Name: Watchtower / Streamline
+
+
+Features: 
+
+NAVBAR
+Left
+  - "Watchtower"
+Right
+  - "Search", "Results"
+
+SEARCH BAR
+    - Checkboxes for "All", "Movie" and "TV"
+
+DISPLAY MOVIE LIST (Matching search)
+    - Title 
+    - Release date
+    - Image
+    - IMDB rating
+
+DISPLAY SINGLE MOVIE (When users clicks from list)
+    - Title
+    - Release date
+    - Image
+    - Short description
+    - IMDB rating
+    - Streams
+
+
+Additional features: 
+    - Loading bar/wheel
+    - Initial screen/search-bar fade in 
+

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryProvider } from "./contexts/QueryContext";
 import "./index.css";
 
+import Dashboard from "./components/Dashboard/Dashboard";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import DetailsPage from "./pages/DetailsPage";
 import ResultsPage from "./pages/ResultsPage";
@@ -12,16 +13,22 @@ import ErrorPage from "./pages/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage/>,
-    errorElement: <ErrorPage/>
-  },
-  {
-    path: "/results/:query",
-    element: <ResultsPage/>,
-  },
-  {
-    path: "/details/:id",
-    element: <DetailsPage/>
+    element: <Dashboard/>,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "/",
+        element: <LandingPage/>,
+      },
+      {
+        path: "/results/:query",
+        element: <ResultsPage/>,
+      },
+      {
+        path: "/details/:id",
+        element: <DetailsPage/>
+      }
+    ]
   }
 ]);
 

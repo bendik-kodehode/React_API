@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    color: red;
+}
+
