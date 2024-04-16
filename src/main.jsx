@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { QueryProvider } from "./contexts/QueryContext";
 import "./index.css";
 
 import LandingPage from "./pages/LandingPage/LandingPage";
@@ -15,19 +16,19 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>
   },
   {
-    path: "/results",
+    path: "/results/:query",
     element: <ResultsPage/>,
-    children: [
-      {
-        path: "/results/:id",
-        element: <DetailsPage/>
-      }
-    ]
+  },
+  {
+    path: "/details/:id",
+    element: <DetailsPage/>
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <QueryProvider>
+      <RouterProvider router={router}/>
+    </QueryProvider>
   </React.StrictMode>
 );

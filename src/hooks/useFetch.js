@@ -19,7 +19,6 @@ function useFetch(apiConfig) {
                 console.error(error.message)
             } finally {
                 setLoading(false);
-                console.log("Fetched from:", apiConfig);
             }
         };
         fetch();

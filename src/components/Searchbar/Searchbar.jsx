@@ -1,7 +1,12 @@
-export default function Searchbar({setInput}) {
+import { useContext, useState } from "react";
+import { useQuery } from "../../contexts/QueryContext";
+
+export default function Searchbar() {
+    const { setQuery } = useQuery();
+
     const handleInput = (e) => {
         e.preventDefault();
-        setInput(e.target.inputField.value)
+        setQuery(e.target.inputField.value)
     }
     return (
         <form onSubmit={handleInput}>
