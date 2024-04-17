@@ -1,12 +1,16 @@
-import { useContext, useState } from "react";
 import { useQuery } from "../../contexts/QueryContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Searchbar() {
-    const { setQuery } = useQuery();
+    const { query, setQuery } = useQuery();
+    const navigate = useNavigate();
 
     const handleInput = (e) => {
         e.preventDefault();
         setQuery(e.target.inputField.value)
+        navigate(`/results/${query}`);
+        console.log("Searchbar Value: ", e.target.inputField.value);
+        console.log("Searchbar Query: ", query);
     }
     return (
         <form onSubmit={handleInput}>

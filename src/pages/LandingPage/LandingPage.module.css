@@ -1,6 +1,6 @@
 .background {
     background: radial-gradient(circle, rgb(90, 90, 90), rgb(54, 54, 54));
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

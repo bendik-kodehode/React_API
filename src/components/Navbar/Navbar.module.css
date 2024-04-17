@@ -1,16 +1,39 @@
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* position: fixed; */
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(216, 216, 216), rgb(196, 196, 196));
+    padding: 0.25rem;
+    align-items: stretch;
+    user-select: none;
 }
 
-h1 {
+nav h1 {
     font-size: 3rem;
 }
 
-ul {
+nav ul {
     display: flex;
+    gap: 0.5rem;
     list-style: none;
-    color: red;
 }
 
+nav li {
+    padding: 0.25rem;
+}
+
+nav a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+    padding: 0.25rem;
+    border-radius: 10%;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    background-color: rgba(88, 88, 88, 0.2);
+}
