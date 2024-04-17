@@ -31,3 +31,12 @@ Additional features:
     - Loading bar/wheel
     - Initial screen/search-bar fade in 
 
+
+TODO:
+  - Fix DetailsPage
+  - Checkboxes under searchbar for (all, tv shows and movies)
+   -Loading
+   -Error handling
+
+Add localStorage (to avoid calling api several time)
+
