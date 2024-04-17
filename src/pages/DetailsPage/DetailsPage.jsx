@@ -15,18 +15,15 @@ export default function DetailsPage() {
 
     const { data, loading, error } = useFetch(apiConfig);
 
-    // Using inline styling here due to url
-    const backdropStyle = {
-        backgroundImage: `url(${data?.backdrop})`,
-        backgroundRepeat: "no-repeat",
-        width: "100%",
-        height: "100%"
-    }
+    if (data) console.log("DetailsData: ", data);
 
     return (
         <div className={style.background}>
-            <div className="backdrop" style={backdropStyle}>
-                <h1>HELLO</h1>
+            <div className={style.wrapper}>
+                <img className={style.backdrop} src={`${data?.backdrop}`} alt="Backdrop Image"/>
+                <div className={style.contentContainer}>
+                    <h1>{data?.title}</h1>
+                </div>
             </div>
         </div>
     )
