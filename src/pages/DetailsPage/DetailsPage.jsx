@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
+import style from "./DetailsPage.module.css";
 
 export default function DetailsPage() {
     const { id } = useParams();
@@ -14,6 +15,7 @@ export default function DetailsPage() {
 
     const { data, loading, error } = useFetch(apiConfig);
 
+    // Using inline styling here due to url
     const backdropStyle = {
         backgroundImage: `url(${data?.backdrop})`,
         backgroundRepeat: "no-repeat",
@@ -22,9 +24,9 @@ export default function DetailsPage() {
     }
 
     return (
-        <div className="background" style={{backgroundColor: "#A9A9A9", height: "stretch", paddingTop: "60px"}}>
+        <div className={style.background}>
             <div className="backdrop" style={backdropStyle}>
-
+                <h1>HELLO</h1>
             </div>
         </div>
     )
