@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom";
 import { useQuery } from "../contexts/QueryContext";
 import useFetch from "../hooks/useFetch";
 import ListItem from "../components/ListItem/ListItem"
@@ -25,7 +23,7 @@ export default function ResultsPage() {
     if (data) console.log("resultsData: ", data);
 
     return (
-        <div style={{backgroundColor: "gray", minHeight: "100vh"}}>
+        <div style={{backgroundColor: "gray", minHeight: "100vh", paddingTop: "60px"}}>
             <ul>
                 {data?.title_results?.map((e, i) => {
                     return <ListItem item={e} key={i} id={e.id}/>

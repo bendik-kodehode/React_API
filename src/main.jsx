@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <LandingPage/>,
-        index: true
+        index: true // Default page
       },
       {
         path: "/results/:query",

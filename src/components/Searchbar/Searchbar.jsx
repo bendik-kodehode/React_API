@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useQuery } from "../../contexts/QueryContext";
 import { useNavigate } from "react-router-dom";
 
