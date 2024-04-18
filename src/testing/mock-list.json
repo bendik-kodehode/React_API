@@ -1,0 +1,182 @@
+[
+    {
+        "resultType": "title",
+        "id": 3157435,
+        "name": "The Lord of the Rings: The Rings of Power",
+        "type": "tv_series",
+        "year": 2022,
+        "imdb_id": "tt7631058",
+        "tmdb_id": 84773,
+        "tmdb_type": "tv"
+    },
+    {
+        "resultType": "title",
+        "id": 1404363,
+        "name": "The Lord of the Rings: The Return of the King",
+        "type": "movie",
+        "year": 2003,
+        "imdb_id": "tt0167260",
+        "tmdb_id": 122,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1404364,
+        "name": "The Lord of the Rings: The Two Towers",
+        "type": "movie",
+        "year": 2002,
+        "imdb_id": "tt0167261",
+        "tmdb_id": 121,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1404362,
+        "name": "The Lord of the Rings: The Fellowship of the Ring",
+        "type": "movie",
+        "year": 2001,
+        "imdb_id": "tt0120737",
+        "tmdb_id": 120,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1404360,
+        "name": "The Lord of the Rings",
+        "type": "movie",
+        "year": 1978,
+        "imdb_id": "tt0077869",
+        "tmdb_id": 123,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1637073,
+        "name": "The Lord of the Rings: The War of the Rohirrim",
+        "type": "movie",
+        "year": 2024,
+        "imdb_id": "tt14824600",
+        "tmdb_id": 839033,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 538641,
+        "name": "The Lord of the Rings: The Quest Fulfilled",
+        "type": "tv_movie",
+        "year": 2003,
+        "imdb_id": "tt0382814",
+        "tmdb_id": 573089,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 2713233,
+        "name": "The Lord of the Rings",
+        "type": "short_film",
+        "year": 1971,
+        "imdb_id": "tt9810254",
+        "tmdb_id": 814413,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1780850,
+        "name": "The Lord of the Rings: The Motion Picture Trilogy",
+        "type": "movie",
+        "year": null,
+        "imdb_id": "tt1695813",
+        "tmdb_id": 1230152,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1806076,
+        "name": "The Lord of the Rings: The Fellowship of the Ring (Extended Edition)",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1266137,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1804894,
+        "name": "The Lord of the Rings the Musical - Original London Production - Promotional Documentary",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1264381,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1749481,
+        "name": "The Lord of the Rings - The Appendices Part 5: The War of the Ring",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1184601,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1749479,
+        "name": "The Lord of the Rings - The Appendices Part 3: The Journey Continues",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1184599,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1806077,
+        "name": "The Lord of the Rings: The Two Towers (Extended Edition)",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1266138,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1798565,
+        "name": "The Lord Of The Rings",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1255431,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1749482,
+        "name": "The Lord of the Rings - The Appendices Part 6: The Passing of an Age",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1184602,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1749480,
+        "name": "The Lord of the Rings - The Appendices Part 4: The Battle for Middle-earth Begins",
+        "type": "movie",
+        "year": null,
+        "imdb_id": null,
+        "tmdb_id": 1184600,
+        "tmdb_type": "movie"
+    },
+    {
+        "resultType": "title",
+        "id": 1749478,
+        "name": "The Lord of the Rings - The Appendices Part 1: From Book to Vision",
+        "type": "movie",
+        "year": 2002,
+        "imdb_id": "tt9810488",
+        "tmdb_id": 1272846,
+        "tmdb_type": "movie"
+    }
+]

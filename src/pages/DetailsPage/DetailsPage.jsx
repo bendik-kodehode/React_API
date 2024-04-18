@@ -2,6 +2,10 @@ import { useParams } from "react-router-dom"
 import useFetch from "../../hooks/useFetch";
 import style from "./DetailsPage.module.css";
 
+// TESTING
+import mockDetails from "../../testing/mock-details.json"
+// -------
+
 export default function DetailsPage() {
     const { id } = useParams();
 
@@ -13,9 +17,11 @@ export default function DetailsPage() {
         }
     };
 
-    const { data, loading, error } = useFetch(apiConfig);
+    // const { data, loading, error } = useFetch(apiConfig);
 
-    if (data) console.log("DetailsData: ", data);
+    // if (data) console.log("DetailsData: ", data);
+    
+    const data = mockDetails[id]
 
     return (
         <div className={style.background}>
