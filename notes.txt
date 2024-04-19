@@ -35,7 +35,6 @@ Additional features:
 TODO:
   - Fix layout of DetailsPage
   - Checkboxes under searchbar for (all, tv shows and movies)
-  - Add magnifying glass to searchbar
    -Loading
    -Error handling
    - DetailsPage: Add default backdrop (for when it's null)
