@@ -28,8 +28,6 @@ export default function Searchbar() {
                     outline: "none",
                     border: "none",
                     borderRadius: "1rem",
-                    // padding: "5px",
-                    paddingRight: "1.5rem",
                     padding: "0.25rem 2.2rem 0.25rem 0.5rem"
 
                 }}

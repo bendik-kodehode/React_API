@@ -35,10 +35,12 @@ Additional features:
 TODO:
   - Fix DetailsPage
   - Checkboxes under searchbar for (all, tv shows and movies)
+  - Add magnifying glass to searchbar
    -Loading
    -Error handling
-   - Fix 100vh on background (atleast in detailsPage)
+        - Fix 100vh on background (atleast in detailsPage)
    - DetailsPage: Add default backdrop (for when it's null)
+   - Greying out of Results in Navbar when no query
 
 Add localStorage (to avoid calling api several time)
 
