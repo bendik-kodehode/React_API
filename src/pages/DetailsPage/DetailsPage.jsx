@@ -41,18 +41,20 @@ export default function DetailsPage() {
                     <p className={styles.details}>Genres: {data?.genres.join(", ")}</p>
                     <p className={styles.details}>Release: {data?.release_date}</p>
                     {data?.runtime_minutes && (
-                    <p className={styles.details}>
-                        Runtime: {formatRuntime(data.runtime_minutes)}
-                    </p>
+                        <p className={styles.details}>
+                            Runtime: {formatRuntime(data.runtime_minutes)}
+                        </p>
                     )}
                 </div>
-                <div className={styles.trailerWrapper}>
-                    <LiteYouTubeEmbed
-                        id={getYoutubeID(data?.trailer)}
-                        title="Trailer"
-                        className={styles.trailer}
-                    />
-                </div>
+                {data?.trailer && (
+                    <div className={styles.trailerWrapper}>
+                        <LiteYouTubeEmbed
+                            id={getYoutubeID(data?.trailer)}
+                            title="Trailer"
+                            className={styles.trailer}
+                        />
+                    </div> 
+                )}
             </div>
         </div>
     )
