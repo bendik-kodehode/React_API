@@ -2,6 +2,7 @@ import { useQuery } from "../../contexts/QueryContext";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import styles from "./Searchbar.module.css";
 
 
 export default function Searchbar() {
@@ -15,36 +16,15 @@ export default function Searchbar() {
         navigate(`/results/${newQuery}`);
     }
     return (
-        <form 
-            onSubmit={handleInput} 
-            style={{
-                position: "relative",
-            }}>
+        <form onSubmit={handleInput}>
             <input 
                 name="inputField"
                 type="text"
-                style={{
-                    height: "1.8rem",
-                    outline: "none",
-                    border: "none",
-                    borderRadius: "1rem",
-                    padding: "0.25rem 2.2rem 0.25rem 0.5rem"
-
-                }}
                 required
                 autoComplete="off"
             />
-            <button type="submit" 
-                style={{
-                    border: "none", 
-                    background: "transparent",
-                    position: "absolute",
-                    right: "5%",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
-                    }}>
-                <FontAwesomeIcon icon={faMagnifyingGlass} style={{fontSize: "1.2rem", color: "gray"}}/>
+            <button type="submit">
+                <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon}/>
             </button>
         </form>
     )
