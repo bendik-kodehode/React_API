@@ -74,6 +74,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 4rem;
+    gap: 1rem;
 }
 
 .detailsContainer {
