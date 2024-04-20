@@ -38,7 +38,7 @@ export default function DetailsPage() {
             <div className={styles.contentContainer}>
                 <img className={styles.backdrop} src={`${data?.backdrop}`} alt="Backdrop Image"/>
                 <div className={styles.textContainer}>
-                    <h1>{data?.title}</h1>
+                    <h2>{data?.title}</h2>
                     
                     <div className={styles.detailsWrapper}>
                         <p className={styles.plot}>{data?.plot_overview}</p>
@@ -81,7 +81,7 @@ export default function DetailsPage() {
                 </div>
                 {data?.trailer && (
                     <div className={styles.trailerWrapper}>
-                        <h2 style={{textAlign: "center"}}>Trailer</h2>
+                        <h3 style={{textAlign: "center"}}>Trailer</h3>
                         <LiteYouTubeEmbed
                             id={getYoutubeID(data?.trailer)}
                             title="Trailer"

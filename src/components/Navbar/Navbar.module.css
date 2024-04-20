@@ -8,6 +8,7 @@ nav {
     align-items: stretch;
     user-select: none;
     height: 60px;
+    z-index: 5;
 }
 
 nav h1 {
