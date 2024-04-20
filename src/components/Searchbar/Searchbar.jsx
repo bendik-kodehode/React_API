@@ -22,6 +22,7 @@ export default function Searchbar() {
                 type="text"
                 required
                 autoComplete="off"
+                maxlength="255"
             />
             <button type="submit">
                 <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon}/>

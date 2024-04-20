@@ -29,7 +29,9 @@ export default function DetailsPage() {
     const getYoutubeID = (url) => {
         const newUrl = new URL(url)
         return newUrl.searchParams.get("v")
-    }   
+    } 
+    
+    const formatDate = (date) => new Date(date).getFullYear();
 
     return (
         <div className={styles.background}>
@@ -37,17 +39,49 @@ export default function DetailsPage() {
                 <img className={styles.backdrop} src={`${data?.backdrop}`} alt="Backdrop Image"/>
                 <div className={styles.textContainer}>
                     <h1>{data?.title}</h1>
-                    <p className={styles.plot}>{data?.plot_overview}</p>
-                    <p className={styles.details}>Genres: {data?.genres.join(", ")}</p>
-                    <p className={styles.details}>Release: {data?.release_date}</p>
-                    {data?.runtime_minutes && (
-                        <p className={styles.details}>
-                            Runtime: {formatRuntime(data.runtime_minutes)}
-                        </p>
-                    )}
+                    
+                    <div className={styles.detailsWrapper}>
+                        <p className={styles.plot}>{data?.plot_overview}</p>
+
+                        <div className={styles.detailsContainer}>
+                            {data?.runtime_minutes && (
+                                <div>
+                                    <p className={styles.detailsTitle}>Runtime</p> 
+                                    <p className={styles.detailsSubtitle}>{formatRuntime(data.runtime_minutes)}</p>
+                                </div>
+                            )}
+                            {data?.user_rating && (
+                                <div>
+                                    <p className={styles.detailsTitle}>Rating</p> 
+                                    <p className={styles.detailsSubtitle}>{data.user_rating} / 10</p>
+                                </div>
+                            )}
+                            {data?.release_date && (
+                                <div>
+                                    <p className={styles.detailsTitle}>Release</p> 
+                                    <p className={styles.detailsSubtitle}>{formatDate(data.release_date)}</p>
+                                </div>
+                            )}
+                            {data?.imdb_id && (
+                                <div>
+                                    <p className={styles.detailsTitle}>IMDB</p> 
+                                    <a href={`https://www.imdb.com/title/${data?.imdb_id}/`} target="_blank">Link</a>
+                                </div>
+                            )}
+                            {data?.genres && (
+                                <div>
+                                    <p className={styles.detailsTitle}>Genres</p>
+                                    {data?.genres.map(e => 
+                                    <p className={styles.detailsSubtitle}>{e}</p>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
                 {data?.trailer && (
                     <div className={styles.trailerWrapper}>
+                        <h2 style={{textAlign: "center"}}>Trailer</h2>
                         <LiteYouTubeEmbed
                             id={getYoutubeID(data?.trailer)}
                             title="Trailer"

@@ -33,12 +33,12 @@ Additional features:
 
 
 TODO:
-  - Fix layout of DetailsPage
   - Checkboxes under searchbar for (all, tv shows and movies)
    -Loading
    -Error handling
    - DetailsPage: Add default backdrop (for when it's null)
    - Greying out of Results in Navbar when no query
+   - Fix page title (not showing)
 
 Add localStorage (to avoid calling api several time)
 
