@@ -15,8 +15,9 @@ function useFetch(apiConfig) {
             try {
                 const result = await axios(apiConfig);
                 setData(result.data)
-            } catch (error) {
-                console.error(error.message)
+            } catch (err) {
+                console.error(err.message)
+                setError(err.message)
             } finally {
                 setLoading(false);
             }

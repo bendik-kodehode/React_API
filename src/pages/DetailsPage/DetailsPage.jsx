@@ -24,6 +24,7 @@ export default function DetailsPage() {
 
     const { data, loading, error } = useFetch(apiConfig);
 
+    if (error) return <ErrorPage error={error}/>
     if (loading) return <LoadingPage/>
 
     // if (data) console.log("DetailsData: ", data);

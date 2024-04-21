@@ -2,6 +2,7 @@ import { useQuery } from "../contexts/QueryContext";
 import useFetch from "../hooks/useFetch";
 import ListItem from "../components/ListItem/ListItem"
 import LoadingPage from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
 
 // TESTING
 import mockList from "../testing/mock-list.json"
@@ -12,7 +13,7 @@ export default function ResultsPage() {
 
     const apiConfig = {
         method: "get",
-        url: `${import.meta.env.VITE_API_URL}/search/`,
+        url: `${import.meta.env.VITE_API_URL}search/`,
         params: {
             apiKey: import.meta.env.VITE_API_KEY,
             search_field: "name",
@@ -25,6 +26,7 @@ export default function ResultsPage() {
 
     const { data, loading, error } = useFetch(apiConfig)
 
+    if (error) return <ErrorPage error={error}/>
     if (loading) return <LoadingPage/>
         
     // if (data) console.log("resultsData: ", data);
