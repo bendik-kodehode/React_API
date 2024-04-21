@@ -36,6 +36,7 @@ TODO:
   - Checkboxes under searchbar for (all, tv shows and movies)
    -Loading
    -Error handling
+      - Catch no search result case
    - DetailsPage: Add default backdrop (for when it's null)
    - Greying out of Results in Navbar when no query
    - Fonts

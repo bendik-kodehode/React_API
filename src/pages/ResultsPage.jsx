@@ -7,7 +7,7 @@ import mockList from "../testing/mock-list.json"
 // -------
 
 export default function ResultsPage() {
-    const { query } = useQuery();
+    const { query, type } = useQuery();
 
     const apiConfig = {
         method: "get",
@@ -15,28 +15,28 @@ export default function ResultsPage() {
         params: {
             apiKey: import.meta.env.VITE_API_KEY,
             search_field: "name",
-            types: "tv,movie",
+            types: type,
             search_value: query
         }
     };
 
     // console.log("ResultQuery: ", query);
 
-    // const { data, loading, error } = useFetch(apiConfig)
+    const { data, loading, error } = useFetch(apiConfig)
 
-    // if (data) console.log("resultsData: ", data);
+    if (data) console.log("resultsData: ", data);
 
-    const data = mockList;
+    // const data = mockList;
 
     return (
         <div style={{backgroundColor: "gray", minHeight: "100vh", paddingTop: "60px"}}>
             <ul>
-                {/* {data?.title_results?.map((e, i) => {
-                    return <ListItem item={e} key={i} id={e.id}/>
-                })} */}
-                {data?.map((e, i) => {
+                {data?.title_results?.map((e, i) => {
                     return <ListItem item={e} key={i} id={e.id}/>
                 })}
+                {/* {data?.map((e, i) => {
+                    return <ListItem item={e} key={i} id={e.id}/>
+                })} */}
             </ul>
         </div>
     )

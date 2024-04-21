@@ -7,7 +7,7 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
 
 // TESTING
 import mockDetails from "../../testing/mock-details.json"
-// -------
+// TESTING
 
 export default function DetailsPage() {
     const { id } = useParams();
@@ -24,7 +24,9 @@ export default function DetailsPage() {
 
     // if (data) console.log("DetailsData: ", data);
     
+    // TESTING
     const data = mockDetails[id]
+    // TESTING
 
     const getYoutubeID = (url) => new URL(url).searchParams.get("v");
     

@@ -1,8 +1,4 @@
-form {
-    position: relative;
-}
-
-input {
+input[type="text"] {
     height: 1.8rem;
     outline: none;
     border: none;
@@ -35,3 +31,78 @@ button {
     transform: scale(1.1);
     transition: transform 0.1s ease-in;
 }
+
+.checkWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.5rem;
+}
+
+.checkContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.checkContainer label {
+    color: rgb(190, 190, 190);
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+.checkContainer input {
+
+}
+
+/* <div class="checkbox-wrapper-18">
+  <div class="round">
+    <input type="checkbox" id="checkbox-18" />
+    <label for="checkbox-18"></label>
+  </div>
+</div>
+
+<style> */
+/* .checkbox-wrapper-18 .round {
+position: relative;
+}
+
+.checkbox-wrapper-18 .round label {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 50%;
+cursor: pointer;
+height: 28px;
+width: 28px;
+display: block;
+}
+
+.checkbox-wrapper-18 .round label:after {
+border: 2px solid #fff;
+border-top: none;
+border-right: none;
+content: "";
+height: 6px;
+left: 8px;
+opacity: 0;
+position: absolute;
+top: 9px;
+transform: rotate(-45deg);
+width: 12px;
+}
+
+.checkbox-wrapper-18 .round input[type="checkbox"] {
+visibility: hidden;
+display: none;
+opacity: 0;
+}
+
+.checkbox-wrapper-18 .round input[type="checkbox"]:checked + label {
+background-color: #66bb6a;
+border-color: #66bb6a;
+}
+
+.checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after {
+opacity: 1;
+} */
+/* </style> */
