@@ -33,13 +33,10 @@ Additional features:
 
 
 TODO:
-   - Greying out of Results in Navbar when no query
-   - Style result list
       - Catch no search result case
-   - Fix genres showing up as numbers (DetailsPage)
-   - Fonts
-
-Add localStorage (to avoid calling api several time)
+  - Style result list
+  - Fix genres showing up as numbers (DetailsPage)
+  - Add localStorage (to avoid calling api several time)
 
   - Clean up code
 

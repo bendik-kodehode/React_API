@@ -29,13 +29,30 @@ export default function ResultsPage() {
     if (error) return <ErrorPage error={error}/>
     if (loading) return <LoadingPage/>
         
-    // if (data) console.log("resultsData: ", data);
+    if (data) console.log("resultsData: ", data);
 
     // const data = mockList;
     // return <LoadingPage/>
 
+    if (!data?.title_results.length) {
+        return (
+            <div style={{
+                    backgroundColor: "gray", 
+                    minHeight: "100vh", 
+                    paddingTop: "60px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                    }}>
+                <p style={{
+                    fontSize: "1.5rem"
+                }}>No matches were found.</p>
+            </div>
+        )
+    }
+
     return (
-        <div style={{backgroundColor: "gray", minHeight: "100vh", paddingTop: "60px"}}>
+        <div style={{backgroundColor: "gray", minHeight: "100vh", paddingTop: "100px"}}>
             <ul>
                 {data?.title_results?.map((e, i) => {
                     return <ListItem item={e} key={i} id={e.id}/>
