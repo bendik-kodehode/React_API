@@ -4,6 +4,7 @@ import styles from "./DetailsPage.module.css";
 import formatRuntime from "../../utils/formatRuntime";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
+import LoadingPage from "../LoadingPage";
 
 // TESTING
 import mockDetails from "../../testing/mock-details.json"
@@ -20,12 +21,14 @@ export default function DetailsPage() {
         }
     };
 
-    // const { data, loading, error } = useFetch(apiConfig);
+    const { data, loading, error } = useFetch(apiConfig);
+
+    if (loading) return <LoadingPage/>
 
     // if (data) console.log("DetailsData: ", data);
     
     // TESTING
-    const data = mockDetails[id]
+    // const data = mockDetails[id]
     // TESTING
 
     const getYoutubeID = (url) => new URL(url).searchParams.get("v");

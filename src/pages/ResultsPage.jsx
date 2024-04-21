@@ -1,6 +1,7 @@
 import { useQuery } from "../contexts/QueryContext";
 import useFetch from "../hooks/useFetch";
 import ListItem from "../components/ListItem/ListItem"
+import LoadingPage from "./LoadingPage";
 
 // TESTING
 import mockList from "../testing/mock-list.json"
@@ -24,9 +25,12 @@ export default function ResultsPage() {
 
     const { data, loading, error } = useFetch(apiConfig)
 
-    if (data) console.log("resultsData: ", data);
+    if (loading) return <LoadingPage/>
+        
+    // if (data) console.log("resultsData: ", data);
 
     // const data = mockList;
+    // return <LoadingPage/>
 
     return (
         <div style={{backgroundColor: "gray", minHeight: "100vh", paddingTop: "60px"}}>
