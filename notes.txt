@@ -33,7 +33,6 @@ Additional features:
 
 
 TODO:
-  - Type in details (movie/tv)
   - Checkboxes under searchbar for (all, tv shows and movies)
    -Loading
    -Error handling

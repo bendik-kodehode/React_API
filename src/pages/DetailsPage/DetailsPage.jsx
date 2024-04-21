@@ -26,12 +26,11 @@ export default function DetailsPage() {
     
     const data = mockDetails[id]
 
-    const getYoutubeID = (url) => {
-        const newUrl = new URL(url)
-        return newUrl.searchParams.get("v")
-    } 
+    const getYoutubeID = (url) => new URL(url).searchParams.get("v");
     
     const formatDate = (date) => new Date(date).getFullYear();
+
+    const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
     return (
         <div className={styles.background}>
@@ -66,6 +65,12 @@ export default function DetailsPage() {
                                 <div>
                                     <p className={styles.detailsTitle}>IMDB</p> 
                                     <a href={`https://www.imdb.com/title/${data?.imdb_id}/`} target="_blank">Link</a>
+                                </div>
+                            )}
+                            {data?.type && (
+                                <div>
+                                    <p className={styles.detailsTitle}>Type</p> 
+                                    <p className={styles.detailsSubtitle}>{capitalize(data?.tmdb_type)}</p>
                                 </div>
                             )}
                             {data?.genres && (
