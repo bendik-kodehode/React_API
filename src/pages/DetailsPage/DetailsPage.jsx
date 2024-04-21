@@ -5,6 +5,7 @@ import formatRuntime from "../../utils/formatRuntime";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
 import LoadingPage from "../LoadingPage";
+import defaultBackdrop from "../../assets/default_backdrop.jpg"
 
 // TESTING
 import mockDetails from "../../testing/mock-details.json"
@@ -40,7 +41,10 @@ export default function DetailsPage() {
     return (
         <div className={styles.background}>
             <div className={styles.contentContainer}>
-                <img className={styles.backdrop} src={`${data?.backdrop}`} alt="Backdrop Image"/>
+                <img 
+                    className={styles.backdrop} 
+                    src={data?.backdrop ? `${data?.backdrop}` : defaultBackdrop} 
+                    alt="Backdrop Image"/>
                 <div className={styles.textContainer}>
                     <h2>{data?.title}</h2>
                     
