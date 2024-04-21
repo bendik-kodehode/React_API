@@ -2,8 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+:root {
+    --primary-color: #fca311;
+    --secondary-color: #14213d;
+    --secondary-color-dark: #101b33; 
+    --background-one: #1f1f1f;
+    --background-two: #424242;
+}
+
+body {
+    font-family: "EB Garamond", serif;
 }
 
 #root {
     height: 100vh;
 }
+

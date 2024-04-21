@@ -3,7 +3,8 @@ nav {
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    background: linear-gradient(to bottom, rgb(216, 216, 216), rgb(196, 196, 196));
+    background: linear-gradient(to bottom, var(--secondary-color), var(--secondary-color-dark));
+    background-color: var(--secondary-color);
     padding: 0.25rem;
     align-items: stretch;
     user-select: none;
@@ -12,13 +13,23 @@ nav {
 }
 
 nav h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-family: "Jersey 25", sans-serif;
+    color: var(--primary-color);
+}
+
+nav h2 {
+    font-family: "Mukta", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary-color);
 }
 
 nav ul {
     display: flex;
     gap: 0.5rem;
     list-style: none;
+    margin: 0 0.5rem;
 }
 
 nav li {
@@ -29,13 +40,11 @@ nav a {
     height: 100%;
     display: flex;
     align-items: center;
-    color: rgb(56, 56, 56);
     text-decoration: none;
-    padding: 0.25rem;
+    padding: 0 0.5rem;
     border-radius: 10%;
-    font-size: 1.2rem;
 }
 
-nav a:hover {
+nav ul a:hover {
     background-color: rgba(88, 88, 88, 0.2);
 }

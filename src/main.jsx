@@ -5,7 +5,7 @@ import { QueryProvider } from "./contexts/QueryContext";
 import "./index.css";
 
 import Dashboard from "./components/Dashboard/Dashboard";
-import LandingPage from "./pages/LandingPage/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import ResultsPage from "./pages/ResultsPage";
 import ErrorPage from "./pages/ErrorPage";

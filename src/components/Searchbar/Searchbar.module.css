@@ -41,13 +41,17 @@ button {
 .checkContainer {
     display: flex;
     align-items: center;
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
 }
 
 .checkContainer label {
-    color: rgb(190, 190, 190);
-    font-size: 0.9rem;
+    color: var(--primary-color);
     user-select: none;
     padding-right: 0.25rem;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.checkContainer input[type="radio"] {
+    cursor: pointer;
 }

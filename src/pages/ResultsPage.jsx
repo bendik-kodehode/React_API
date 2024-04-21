@@ -13,7 +13,7 @@ export default function ResultsPage() {
 
     const apiConfig = {
         method: "get",
-        url: `${import.meta.env.VITE_API_URL}search/`,
+        url: `${import.meta.env.VITE_API_URL}/search/`,
         params: {
             apiKey: import.meta.env.VITE_API_KEY,
             search_field: "name",
