@@ -33,14 +33,15 @@ Additional features:
 
 
 TODO:
-   -Error handling
-      - Catch no search result case
-   - DetailsPage: Add default backdrop (for when it's null)
    - Greying out of Results in Navbar when no query
+   - Style result list
+      - Catch no search result case
    - Fix genres showing up as numbers (DetailsPage)
    - Fonts
 
 Add localStorage (to avoid calling api several time)
+
+  - Clean up code
 
 
 Test case where results in accessed through address bar
