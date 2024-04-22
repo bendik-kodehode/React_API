@@ -17,16 +17,17 @@
     transition: background-color 0.1s ease-in;
 }
 
-h2 {
+.list h2 {
     color: var(--primary-color);
     font-size: 1.3rem;
+    max-width: 60ch;
 }
 
-a {
+.list a {
     text-decoration: none;
 }
 
-p {
+.list p {
     color: var(--primary-color);
 }
 
