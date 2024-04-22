@@ -33,9 +33,9 @@ Additional features:
 
 
 TODO:
-      - Catch no search result case
   - Style result list
   - Fix genres showing up as numbers (DetailsPage)
+  - Add logic to show on Navbar Navlinks where the user is currently
   - Add localStorage (to avoid calling api several time)
 
   - Clean up code

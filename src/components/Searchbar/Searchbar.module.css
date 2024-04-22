@@ -47,9 +47,12 @@ button {
 .checkContainer label {
     color: var(--primary-color);
     user-select: none;
+    font-size: 0.9rem;
     padding-right: 0.25rem;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    font-family: "Mukta", sans-serif;
+    font-weight: 300;
 }
 
 .checkContainer input[type="radio"] {

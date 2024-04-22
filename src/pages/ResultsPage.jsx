@@ -52,8 +52,19 @@ export default function ResultsPage() {
     }
 
     return (
-        <div style={{backgroundColor: "gray", minHeight: "100vh", paddingTop: "100px"}}>
-            <ul>
+        <div style={{
+                background: "linear-gradient(to top, var(--background-one), var(--background-two))", 
+                backgroundAttachment: "fixed",
+                minHeight: "100vh", 
+                padding: "80px 0",
+                display: "flex",
+                justifyContent: "center"
+                }}>
+            <ul style={{
+                    display: "flex", 
+                    flexDirection: "column", 
+                    gap: "1rem",
+                    }}>
                 {data?.title_results?.map((e, i) => {
                     return <ListItem item={e} key={i} id={e.id}/>
                 })}
