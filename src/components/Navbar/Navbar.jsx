@@ -7,7 +7,9 @@ export default function Navbar() {
 
     return (
     <nav className={styles.navbar}>
-        <NavLink to="/" className={styles.anchor}><h1 className={styles.title}>Watchtower</h1></NavLink>
+        <NavLink to="/" className={styles.anchor}>
+            <h1 className={styles.title}>Watchtower</h1>
+        </NavLink>
         <ul className={styles.list}>
             <li className={styles.listItem}>
                 <NavLink to="/" className={styles.anchor}>
