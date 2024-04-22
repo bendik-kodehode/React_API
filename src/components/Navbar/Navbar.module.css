@@ -1,4 +1,4 @@
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -12,31 +12,31 @@ nav {
     z-index: 5;
 }
 
-nav h1 {
+.title {
     font-size: 4rem;
     font-family: "Jersey 25", sans-serif;
     color: var(--primary-color);
 }
 
-nav h2 {
+.subtitle {
     font-family: "Mukta", sans-serif;
     font-weight: 600;
     font-size: 1rem;
     color: var(--primary-color);
 }
 
-nav ul {
+.list {
     display: flex;
     gap: 0.5rem;
     list-style: none;
     margin: 0 0.5rem;
 }
 
-nav li {
+.listItem {
     padding: 0.25rem;
 }
 
-nav a {
+.anchor {
     height: 100%;
     display: flex;
     align-items: center;
@@ -45,6 +45,6 @@ nav a {
     border-radius: 10%;
 }
 
-nav ul a:hover {
+.anchor:hover {
     background-color: rgba(88, 88, 88, 0.2);
 }
