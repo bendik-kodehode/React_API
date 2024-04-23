@@ -7,7 +7,7 @@ import "./index.css";
 import Dashboard from "./components/Dashboard/Dashboard";
 import LandingPage from "./pages/LandingPage";
 import DetailsPage from "./pages/DetailsPage/DetailsPage";
-import ResultsPage from "./pages/ResultsPage";
+import ResultsPage from "./pages/ResultsPage/ResultsPage";
 import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([

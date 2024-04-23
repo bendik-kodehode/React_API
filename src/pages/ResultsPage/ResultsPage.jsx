@@ -1,11 +1,12 @@
-import { useQuery } from "../contexts/QueryContext";
-import useFetch from "../hooks/useFetch";
-import ListItem from "../components/ListItem/ListItem"
-import LoadingPage from "./LoadingPage";
-import ErrorPage from "./ErrorPage";
+import { useQuery } from "../../contexts/QueryContext";
+import useFetch from "../../hooks/useFetch";
+import ListItem from "../../components/ListItem/ListItem"
+import LoadingPage from "../LoadingPage";
+import ErrorPage from "../ErrorPage";
+import styles from "./ResultsPage.module.css"
 
 // TESTING
-import mockList from "../testing/mock-list.json"
+// import mockList from "../testing/mock-list.json"
 // -------
 
 export default function ResultsPage() {
@@ -22,8 +23,6 @@ export default function ResultsPage() {
         }
     };
 
-    // console.log("ResultQuery: ", query);
-
     const { data, loading, error } = useFetch(apiConfig)
 
     if (error) return <ErrorPage error={error}/>
@@ -36,30 +35,14 @@ export default function ResultsPage() {
 
     if (!data?.title_results.length) {
         return (
-            <div style={{
-                    backgroundColor: "gray", 
-                    minHeight: "100vh", 
-                    paddingTop: "60px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                    }}>
-                <p style={{
-                    fontSize: "1.5rem"
-                }}>No matches were found.</p>
+            <div className={styles.background}>
+                <p className={styles.errorMsg}>No matches were found.</p>
             </div>
         )
     }
 
     return (
-        <div style={{
-                background: "linear-gradient(to top, var(--background-one), var(--background-two))", 
-                backgroundAttachment: "fixed",
-                minHeight: "100vh", 
-                padding: "80px 0",
-                display: "flex",
-                justifyContent: "center"
-                }}>
+        <div className={styles.background}>
             <ul style={{
                     display: "flex", 
                     flexDirection: "column", 

@@ -18,7 +18,7 @@ export default function ErrorPage({error}) {
                 }}>:(</h2>
             <p style={{
                 fontSize: "1.5rem"
-            }}>{error}.</p>
+            }}>{error ? error : "Fatal error. Please contact an adult"}.</p>
         </div>
     )
 }
