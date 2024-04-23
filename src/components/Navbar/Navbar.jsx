@@ -7,24 +7,24 @@ export default function Navbar() {
 
     return (
     <nav className={styles.navbar}>
-        <NavLink to="/" className={styles.anchor}>
+        <NavLink to="/">
             <h1 className={styles.title}>Watchtower</h1>
         </NavLink>
         <ul className={styles.list}>
             <li className={styles.listItem}>
-                <NavLink to="/" className={styles.anchor}>
+                <NavLink to="/">
                     <h2 className={styles.subtitle}>SEARCH</h2>
                 </NavLink>
             </li>
             <li className={styles.listItem}>
                 {
-                    query ?
-                    <NavLink to={`/results/${query}`} className={styles.anchor}>
-                        <h2 className={styles.subtitle}>RESULTS</h2>
-                    </NavLink> :
-                    <NavLink style={{opacity: "50%", cursor: "default"}} className={styles.anchor}>
-                        <h2 className={styles.subtitle}>RESULTS</h2>
-                    </NavLink>
+                query ?
+                <NavLink to={`/results/${query}`}>
+                    <h2 className={styles.subtitle}>RESULTS</h2>
+                </NavLink> :
+                <NavLink to={query ? `/results/${query}` : "/"}>
+                    <h2 className={`${styles.subtitle} ${query ? "" : styles.disabled}`}>RESULTS</h2>
+                </NavLink>
                 }
             </li>
         </ul>

@@ -33,6 +33,8 @@ Additional features:
 
 
 TODO:
+  - Style no results found background
+  - Fix gap between title and year in result list
   - Style result list
   - Fix genres showing up as numbers (DetailsPage)
   - Add logic to show on Navbar Navlinks where the user is currently
