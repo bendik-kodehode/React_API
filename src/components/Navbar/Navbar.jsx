@@ -6,26 +6,20 @@ export default function Navbar() {
     const { query } = useQuery();
 
     return (
-    <nav className={styles.navbar}>
+    <nav>
         <NavLink to="/">
             <h1 className={styles.title}>Watchtower</h1>
         </NavLink>
-        <ul className={styles.list}>
-            <li className={styles.listItem}>
+        <ul>
+            <li>
                 <NavLink to="/">
                     <h2 className={styles.subtitle}>SEARCH</h2>
                 </NavLink>
             </li>
-            <li className={styles.listItem}>
-                {
-                query ?
-                <NavLink to={`/results/${query}`}>
-                    <h2 className={styles.subtitle}>RESULTS</h2>
-                </NavLink> :
+            <li>
                 <NavLink to={query ? `/results/${query}` : "/"}>
                     <h2 className={`${styles.subtitle} ${query ? "" : styles.disabled}`}>RESULTS</h2>
                 </NavLink>
-                }
             </li>
         </ul>
     </nav>
