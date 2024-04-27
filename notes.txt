@@ -33,10 +33,10 @@ Additional features:
 
 
 TODO:
-      - Add localStorage (to avoid calling api several times)
   - Fix gap between title and year in result list
   - Fix genres showing up as numbers (DetailsPage)
   - Add logic to show on Navbar Navlinks where the user is currently
+  - Set background on ResultsPage and DetailsPage to that of LandingPage
 
   - Clean up code
 
