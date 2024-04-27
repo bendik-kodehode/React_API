@@ -3,27 +3,35 @@ import axios from "axios";
     
 function useFetch(apiConfig) {
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
         setData(null);
         setError(null);
-
-        const fetch = async () => {
-            try {
-                const result = await axios(apiConfig);
-                setData(result.data)
-            } catch (err) {
-                console.error(err.message)
-                setError(err.message)
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetch();
+        const cacheKey = `data-${apiConfig.url}-${JSON.stringify(apiConfig.params)}`
+        const retrievedData = sessionStorage.getItem(cacheKey)
+        
+        if (retrievedData) {
+            setData(JSON.parse(retrievedData))
+        } else {
+            const fetch = async () => {
+                setLoading(true);
+                try {
+                    const result = await axios(apiConfig);
+                    setData(result.data)
+                    sessionStorage.setItem(cacheKey, JSON.stringify(result.data))
+                } catch (err) {
+                    console.error(err.message)
+                    setError(err.message)
+                } finally {
+                    setLoading(false);
+                }
+            };
+            fetch();
+        }
     }, [apiConfig.url, JSON.stringify(apiConfig.params)])
+
 
     return { data, loading, error }    ;
 }

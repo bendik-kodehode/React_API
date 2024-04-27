@@ -23,12 +23,9 @@ export default function ResultsPage() {
         }
     };
 
-    const { data, loading, error } = useFetch(apiConfig)
-
+    let { data, loading, error } = useFetch(apiConfig)
     if (error) return <ErrorPage error={error}/>
     if (loading) return <LoadingPage/>
-        
-    if (data) console.log("resultsData: ", data);
 
     // const data = mockList;
     // return <LoadingPage/>
